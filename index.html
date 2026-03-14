@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadiq Sons & A&Z Trading — Bulk FMCG Export from Pakistan</title>
+    <meta name="description" content="Premium Pakistani FMCG products at wholesale-beating prices. 126+ products, 25 brands, direct from Karachi to Kuala Lumpur.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        :root {
+            --green: #00d4aa;
+            --green-dark: #00a88a;
+            --dark: #0f1724;
+            --card: #1a2332;
+            --text: #e8ecf1;
+            --muted: #8899aa;
+            --amber: #ffd93d;
+            --red: #ff6b6b;
+            --purple: #6c5ce7;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Inter',sans-serif; background:var(--dark); color:var(--text); }
+        .hero { min-height:80vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:60px 24px; background:radial-gradient(ellipse at 50% 20%, rgba(0,212,170,0.12) 0%, transparent 60%),radial-gradient(ellipse at 80% 80%, rgba(108,92,231,0.08) 0%, transparent 50%),var(--dark); }
+        .hero-content { max-width:720px; }
+        .hero-badge { display:inline-block; padding:6px 16px; background:rgba(0,212,170,0.12); border:1px solid rgba(0,212,170,0.25); border-radius:20px; font-size:12px; color:var(--green); font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-bottom:24px; }
+        .hero h1 { font-size:clamp(32px,5vw,52px); font-weight:800; line-height:1.15; margin-bottom:20px; }
+        .hero h1 .accent { background:linear-gradient(90deg,var(--green),#4ecdc4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        .hero p { font-size:17px; color:var(--muted); line-height:1.7; margin-bottom:32px; }
+        .hero-stats { display:flex; justify-content:center; gap:40px; margin-top:40px; flex-wrap:wrap; }
+        .hero-stat { text-align:center; }
+        .hero-stat .num { font-size:36px; font-weight:800; color:var(--green); }
+        .hero-stat .label { font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:0.8px; margin-top:4px; }
+        section { padding:80px 24px; }
+        .container { max-width:1100px; margin:0 auto; }
+        .section-title { font-size:28px; font-weight:700; text-align:center; margin-bottom:12px; }
+        .section-sub { text-align:center; color:var(--muted); font-size:15px; margin-bottom:48px; max-width:600px; margin-left:auto; margin-right:auto; }
+        .benefits-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
+        .benefit-card { background:var(--card); border-radius:12px; padding:28px; border:1px solid rgba(255,255,255,0.06); transition:transform 0.2s,border-color 0.2s; }
+        .benefit-card:hover { transform:translateY(-4px); border-color:rgba(0,212,170,0.2); }
+        .benefit-icon { width:44px; height:44px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:22px; margin-bottom:16px; }
+        .benefit-card h3 { font-size:16px; font-weight:600; margin-bottom:8px; }
+        .benefit-card p { font-size:13px; color:var(--muted); line-height:1.7; }
+        .savings-section { background:rgba(0,212,170,0.03); }
+        .savings-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
+        .savings-visual { background:var(--card); border-radius:12px; padding:32px; border:1px solid rgba(255,255,255,0.06); }
+        .bar-compare { margin-bottom:20px; }
+        .bar-label { font-size:12px; color:var(--muted); margin-bottom:6px; display:flex; justify-content:space-between; }
+        .bar-track { height:28px; background:rgba(255,255,255,0.05); border-radius:6px; overflow:hidden; }
+        .bar-fill { height:100%; border-radius:6px; display:flex; align-items:center; padding-left:12px; font-size:12px; font-weight:600; color:white; }
+        .savings-text h3 { font-size:22px; font-weight:700; margin-bottom:16px; }
+        .savings-text p { font-size:14px; color:var(--muted); line-height:1.8; margin-bottom:12px; }
+        .savings-text .highlight { color:var(--green); font-weight:600; }
+        .brands-row { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+        .brand-tag { padding:8px 18px; background:var(--card); border:1px solid rgba(255,255,255,0.08); border-radius:8px; font-size:13px; font-weight:500; color:var(--text); transition:border-color 0.2s; }
+        .brand-tag:hover { border-color:var(--green); }
+        .cat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+        .cat-card { background:var(--card); border-radius:12px; padding:24px; border:1px solid rgba(255,255,255,0.06); text-align:center; }
+        .cat-card .cat-num { font-size:32px; font-weight:800; color:var(--green); }
+        .cat-card .cat-name { font-size:14px; color:var(--text); margin-top:4px; }
+        .cat-card .cat-desc { font-size:12px; color:var(--muted); margin-top:4px; }
+        .cta-section { text-align:center; background:linear-gradient(135deg,rgba(0,212,170,0.08),rgba(108,92,231,0.06)); border-radius:16px; padding:48px 32px; margin:0 24px 40px; max-width:1100px; margin-left:auto; margin-right:auto; }
+        .cta-section h2 { font-size:24px; font-weight:700; margin-bottom:12px; }
+        .cta-section p { color:var(--muted); font-size:14px; margin-bottom:24px; }
+        .cta-btn { display:inline-block; padding:14px 36px; background:linear-gradient(135deg,var(--green),var(--green-dark)); color:var(--dark); font-weight:700; font-size:14px; border-radius:8px; text-decoration:none; letter-spacing:0.3px; transition:transform 0.2s; }
+        .cta-btn:hover { transform:translateY(-2px); }
+        .footer { text-align:center; padding:24px; font-size:12px; color:var(--muted); border-top:1px solid rgba(255,255,255,0.04); }
+        @media(max-width:768px) { .savings-grid{grid-template-columns:1fr;} .hero-stats{gap:24px;} }
+    </style>
+</head>
+<body>
+<section class="hero"><div class="hero-content">
+<div class="hero-badge">Pakistan → Malaysia Direct Supply</div>
+<h1>Premium Pakistani FMCG at <span class="accent">Wholesale-Beating Prices</span></h1>
+<p>We source 126+ authentic Pakistani products from 25 trusted brands and deliver them directly to Kuala Lumpur — at prices 8.5% below Karachi wholesale and with margins up to 68% for Malaysian retailers.</p>
+<div class="hero-stats"><div class="hero-stat"><div class="num">126+</div><div class="label">Products</div></div><div class="hero-stat"><div class="num">25</div><div class="label">Brands</div></div><div class="hero-stat"><div class="num">8.5%</div><div class="label">Below Wholesale</div></div><div class="hero-stat"><div class="num">34.8%</div><div class="label">Avg Margin</div></div></div></div></section>
+<section><div class="container"><h2 class="section-title">Why Buy in Bulk From Us?</h2><p class="section-sub">Direct procurement relationships with Pakistani manufacturers and distributors eliminate middlemen, reduce costs, and guarantee authenticity.</p><div class="benefits-grid"><div class="benefit-card"><div class="benefit-icon" style="background:rgba(0,212,170,0.12)">💰</div><h3>8.5% Below Wholesale</h3><p>Our direct relationships with manufacturers mean we consistently beat Karachi wholesale prices by an average of 8.5%, with some items up to 13.1% cheaper.</p></div><div class="benefit-card"><div class="benefit-icon" style="background:rgba(255,217,61,0.12)">📦</div><h3>Full Container Loads</h3><p>We ship 20ft containers (21,000 KG each) directly from Karachi to Port Klang. Bulk shipping dramatically reduces per-unit logistics costs versus piecemeal importing.</p></div><div class="benefit-card"><div class="benefit-icon" style="background:rgba(108,92,231,0.12)">✅</div><h3>Verified & Authenticated</h3><p>Every product sourced directly from authorized distributors. All transactions documented with bank-verified payments, bill-of-lading, and customs clearance.</p></div><div class="benefit-card"><div class="benefit-icon" style="background:rgba(255,107,107,0.12)">📊</div><h3>Retailer-Ready Margins</h3><p>Average true margin of 34.8% after all landed costs. Top categories like health products and cosmetics deliver margins exceeding 50%.</p></div><div class="benefit-card"><div class="benefit-icon" style="background:rgba(116,185,255,0.12)">🌏</div><h3>Malaysia Market Expertise</h3><p>Competitive pricing benchmarked against Malaysian retail (RM prices) and local alternatives like Baba's, Adabi, and Maggi to ensure market fit.</p></div><div class="benefit-card"><div class="benefit-icon" style="background:rgba(162,155,254,0.12)">🤝</div><h3>End-to-End Service</h3><p>From sourcing and quality checks in Karachi to customs clearance and Port Klang delivery — we handle every step of the supply chain.</p></div></div></div></section>
+<section class="savings-section"><div class="container"><h2 class="section-title">Real Savings, Real Numbers</h2><p class="section-sub">A direct comparison showing how our bulk procurement delivers value at every price point.</p><div class="savings-grid"><div class="savings-visual"><div class="bar-compare"><div class="bar-label"><span>Normal Wholesale Rate</span><span>100%</span></div><div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--amber)">Wholesale</div></div></div><div class="bar-compare"><div class="bar-label"><span>Our Bulk Price</span><span>91.5%</span></div><div class="bar-track"><div class="bar-fill" style="width:91.5%;background:var(--green)">Our Price — 8.5% Less</div></div></div><div class="bar-compare"><div class="bar-label"><span>KL Retail Revenue</span><span>134.8%</span></div><div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--purple)">Your Revenue — 34.8% Margin</div></div></div><div style="margin-top:20px;padding:16px;background:rgba(0,212,170,0.08);border-radius:8px;text-align:center;"><div style="font-size:13px;color:var(--muted);">Average Savings Per Container</div><div style="font-size:28px;font-weight:800;color:var(--green);">PKR 790,000+</div><div style="font-size:12px;color:var(--muted);">vs wholesale procurement</div></div></div><div class="savings-text"><h3>The Bulk Buying Advantage</h3><p>When you buy through retail or small wholesale channels, you're paying markups at every step. Our model eliminates those layers:</p><p><span class="highlight">Direct Manufacturer Access</span> — We purchase directly from factories of National, Shan, Laziza, Marhaba, and 21 other brands.</p><p><span class="highlight">Volume Discounts</span> — Ordering in full-container quantities unlocks pricing tiers unavailable to small buyers.</p><p><span class="highlight">Consolidated Shipping</span> — One container, one customs clearance, one freight charge — not dozens of individual shipments.</p><p><span class="highlight">Proven Track Record</span> — 3 containers shipped (2 delivered, 1 in planning), with every transaction documented and verified.</p></div></div></div></section>
+<section><div class="container"><h2 class="section-title">25 Trusted Pakistani Brands</h2><p class="section-sub">Household names loved by Pakistani communities worldwide.</p><div class="brands-row"><span class="brand-tag">National</span><span class="brand-tag">Shan</span><span class="brand-tag">Laziza</span><span class="brand-tag">Tapal</span><span class="brand-tag">Tang</span><span class="brand-tag">Marhaba</span><span class="brand-tag">Hamdard</span><span class="brand-tag">ENO</span><span class="brand-tag">Rafhan</span><span class="brand-tag">Knorr</span><span class="brand-tag">Young's</span><span class="brand-tag">Shangrilla</span><span class="brand-tag">Bake Parlour</span><span class="brand-tag">Innovative</span><span class="brand-tag">Ambala</span><span class="brand-tag">Rehmat-e-Shereen</span><span class="brand-tag">Samsol</span><span class="brand-tag">Olivia</span><span class="brand-tag">Tibet Snow</span><span class="brand-tag">Faiza</span><span class="brand-tag">Stillman's</span><span class="brand-tag">Bio Amla</span><span class="brand-tag">Qarshi</span><span class="brand-tag">SAC Essence</span><span class="brand-tag">Nestle Pakistan</span></div></div></section>
+<section style="background:rgba(108,92,231,0.03)"><div class="container"><h2 class="section-title">Product Categories</h2><p class="section-sub">Curated for the Malaysian market with competitive retail pricing.</p><div class="cat-grid"><div class="cat-card"><div class="cat-num">70</div><div class="cat-name">Branded Food</div><div class="cat-desc">Masalas, spices, cooking pastes, noodles, desserts</div></div><div class="cat-card"><div class="cat-num">28</div><div class="cat-name">Cosmetics & Beauty</div><div class="cat-desc">Creams, hair oils, colors, beauty products</div></div><div class="cat-card"><div class="cat-num">12</div><div class="cat-name">Biscuits & Snacks</div><div class="cat-desc">Premium biscuit brands, confectionery</div></div><div class="cat-card"><div class="cat-num">8</div><div class="cat-name">Sweets & Mithai</div><div class="cat-desc">Ambala, Rehmat-e-Shereen traditional sweets</div></div><div class="cat-card"><div class="cat-num">8</div><div class="cat-name">Bulk Spices</div><div class="cat-desc">Whole and ground spices in bulk packing</div></div></div></div></section>
+<section style="padding:60px 24px"><div class="cta-section"><h2>Ready to Stock Premium Pakistani Products?</h2><p>Whether you're a retailer, distributor, or wholesaler in Malaysia — we can supply you with authentic Pakistani FMCG products at unbeatable prices.</p><a href="mailto:sadiqsons.az@gmail.com" class="cta-btn">Contact Us for Pricing</a><a href="dashboard.html" class="cta-btn" style="background:linear-gradient(135deg,var(--purple),#4834d4);margin-left:12px;">View Live Dashboard</a><p style="margin-top:16px;font-size:12px;color:var(--muted);">Sadiq Sons & A&Z Trading | Karachi, Pakistan → Kuala Lumpur, Malaysia</p></div></section>
+<footer class="footer">© 2026 Sadiq Sons & A&Z Trading. All rights reserved. | Data verified from authenticated supplier records.</footer>
+</body></html>
