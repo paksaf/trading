@@ -93,9 +93,9 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
     <div class="fg"><label>View</label><select id="fView"><option value="overview">Overview</option><option value="packing">Packing List</option><option value="profit">Profit & Costs</option></select></div>
   </div>
 </header>
-
+ 
 <div id="kpiSection" class="kpis"></div>
-
+ 
 <div id="overviewSection">
   <div class="row2">
     <div class="card"><h3>Category-wise Spend <span class="badge bg">PKR</span></h3><div class="cw"><canvas id="catSpend"></canvas></div></div>
@@ -114,7 +114,7 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
     <div class="card"><h3>Brand Polar Area <span class="badge bg">Products</span></h3><div class="cw"><canvas id="brandPolar"></canvas></div></div>
   </div>
 </div>
-
+ 
 <div id="packingSection" style="display:none">
   <div class="card" style="margin-bottom:var(--g)">
     <h3>Container Loading Manifest <span class="badge ba" id="packBadge">All Containers</span></h3>
@@ -129,7 +129,7 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
     <table id="itemsTable"><thead><tr><th>SN</th><th>Product</th><th>Brand</th><th>Size</th><th>Category</th><th>Pcs/Ctn</th><th>Our Cost</th><th>Landed</th><th>KL Revenue</th><th>Margin</th></tr></thead><tbody></tbody></table>
   </div>
 </div>
-
+ 
 <div id="profitSection" style="display:none">
   <div class="row2">
     <div class="card">
@@ -156,21 +156,21 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
     </div>
   </div>
 </div>
-
+ 
 <div class="card" style="margin-bottom:var(--g)">
   <h3>Rate Verification <span class="badge ba">Bill vs Reported</span></h3>
   <div style="max-height:350px;overflow-y:auto">
   <table id="rvTable"><thead><tr><th>Product</th><th>Brand</th><th>Source</th><th>Supplier</th><th>Bill Rate</th><th>Reported</th><th>Diff</th><th>Diff%</th><th>Status</th></tr></thead><tbody></tbody></table>
   </div>
 </div>
-
+ 
 <div class="card" style="margin-bottom:var(--g)">
   <h3>Discrepancy Summary <span class="badge br">Audit Findings</span></h3>
   <div style="max-height:350px;overflow-y:auto">
   <table id="discTable"><thead><tr><th>Category</th><th>Finding</th><th>Severity</th><th>Bill Ref</th><th>Reported</th><th>Verified</th><th>Action</th></tr></thead><tbody></tbody></table>
   </div>
 </div>
-
+ 
 <div class="sum">
   <h2>Executive Summary</h2>
   <div class="sg">
@@ -186,10 +186,10 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
     <span class="slink">Benchmark_Prices</span>
   </div>
 </div>
-
+ 
 <div class="ft">Pakistan → Malaysia FMCG Export Dashboard | Sadiq Sons & A&Z Trading | Data from Malaysia_Export_Enhanced_Workbook.xlsx & Procurement_Dispatch_Workbook.xlsx</div>
 </div>
-
+ 
 <script>
 const ITEMS = [{"sn": 1, "product": "Achaar Gosht 100g", "brand": "National", "size": "100g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 11160.0, "wholesale_ctn": 12053.0, "savings": 7.4, "landed_cost": 13650.0, "kl_retail": 7.5, "kl_revenue": 18900.0, "margin": 27.8}, {"sn": 2, "product": "Biryani Standard 100g", "brand": "National", "size": "100g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 11880.0, "wholesale_ctn": 12830.0, "savings": 7.4, "landed_cost": 14370.0, "kl_retail": 8.0, "kl_revenue": 20160.0, "margin": 28.7}, {"sn": 3, "product": "Biryani Bombay 100g", "brand": "National", "size": "100g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 14700.0, "wholesale_ctn": 15876.0, "savings": 7.4, "landed_cost": 17190.0, "kl_retail": 6.5, "kl_revenue": 16380.0, "margin": -4.9}, {"sn": 4, "product": "Pulao Masala 100g", "brand": "National", "size": "100g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 10440.0, "wholesale_ctn": 11275.0, "savings": 7.4, "landed_cost": 12930.0, "kl_retail": 7.0, "kl_revenue": 17640.0, "margin": 26.7}, {"sn": 5, "product": "Qorma Masala 100g", "brand": "National", "size": "100g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 11160.0, "wholesale_ctn": 12053.0, "savings": 7.4, "landed_cost": 13650.0, "kl_retail": 7.5, "kl_revenue": 18900.0, "margin": 27.8}, {"sn": 6, "product": "Tikka Boti 100g", "brand": "National", "size": "100g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 10764.0, "wholesale_ctn": 11625.0, "savings": 7.4, "landed_cost": 13254.0, "kl_retail": 7.0, "kl_revenue": 17640.0, "margin": 24.9}, {"sn": 7, "product": "Chicken Masala 100g", "brand": "National", "size": "100g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 11160.0, "wholesale_ctn": 12053.0, "savings": 7.4, "landed_cost": 13650.0, "kl_retail": 7.5, "kl_revenue": 18900.0, "margin": 27.8}, {"sn": 8, "product": "Dehli Nihari 100g", "brand": "National", "size": "100g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 9000.0, "wholesale_ctn": 9720.0, "savings": 7.4, "landed_cost": 11490.0, "kl_retail": 6.0, "kl_revenue": 15120.0, "margin": 24.0}, {"sn": 9, "product": "Fish Masala 100g", "brand": "National", "size": "100g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 10440.0, "wholesale_ctn": 11275.0, "savings": 7.4, "landed_cost": 12930.0, "kl_retail": 7.0, "kl_revenue": 17640.0, "margin": 26.7}, {"sn": 10, "product": "Karahi Gosht 100g", "brand": "National", "size": "100g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 11160.0, "wholesale_ctn": 12053.0, "savings": 7.4, "landed_cost": 13650.0, "kl_retail": 7.5, "kl_revenue": 18900.0, "margin": 27.8}, {"sn": 11, "product": "Biryani Mutton 50g", "brand": "National", "size": "50g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 5400.0, "wholesale_ctn": 5832.0, "savings": 7.4, "landed_cost": 7890.0, "kl_retail": 4.5, "kl_revenue": 11340.0, "margin": 30.4}, {"sn": 12, "product": "Biryani Sindhi 50g", "brand": "National", "size": "50g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 4104.0, "wholesale_ctn": 4432.0, "savings": 7.4, "landed_cost": 6594.0, "kl_retail": 3.5, "kl_revenue": 8820.0, "margin": 25.2}, {"sn": 13, "product": "Paya Masala 50g", "brand": "National", "size": "50g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 6480.0, "wholesale_ctn": 6998.0, "savings": 7.4, "landed_cost": 8970.0, "kl_retail": 5.0, "kl_revenue": 12600.0, "margin": 28.8}, {"sn": 14, "product": "Chapli Kabab 50g", "brand": "National", "size": "50g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 5400.0, "wholesale_ctn": 5832.0, "savings": 7.4, "landed_cost": 7890.0, "kl_retail": 4.5, "kl_revenue": 11340.0, "margin": 30.4}, {"sn": 15, "product": "Seekh Kabab 50g", "brand": "National", "size": "50g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 5400.0, "wholesale_ctn": 5832.0, "savings": 7.4, "landed_cost": 7890.0, "kl_retail": 4.5, "kl_revenue": 11340.0, "margin": 30.4}, {"sn": 16, "product": "Shami Kabab 50g", "brand": "National", "size": "50g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 5400.0, "wholesale_ctn": 5832.0, "savings": 7.4, "landed_cost": 7890.0, "kl_retail": 4.5, "kl_revenue": 11340.0, "margin": 30.4}, {"sn": 17, "product": "Tandoori Masala 50g", "brand": "National", "size": "50g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 4104.0, "wholesale_ctn": 4432.0, "savings": 7.4, "landed_cost": 6594.0, "kl_retail": 3.5, "kl_revenue": 8820.0, "margin": 25.2}, {"sn": 18, "product": "Chicken Tikka 50g", "brand": "National", "size": "50g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 5400.0, "wholesale_ctn": 5832.0, "savings": 7.4, "landed_cost": 7890.0, "kl_retail": 4.5, "kl_revenue": 11340.0, "margin": 30.4}, {"sn": 19, "product": "Chilli Garlic Sauce 800g", "brand": "National", "size": "800g", "category": "Branded Food", "ctr": 1, "pcs": 12, "our_cost": 4920.0, "wholesale_ctn": 5314.0, "savings": 7.4, "landed_cost": 7410.0, "kl_retail": 12.0, "kl_revenue": 10080.0, "margin": 26.5}, {"sn": 20, "product": "Chilli Garlic Sauce 400g", "brand": "National", "size": "400g", "category": "Branded Food", "ctr": 1, "pcs": 24, "our_cost": 4896.0, "wholesale_ctn": 5288.0, "savings": 7.4, "landed_cost": 7386.0, "kl_retail": 7.0, "kl_revenue": 11760.0, "margin": 37.2}, {"sn": 21, "product": "Pickle Mango 900g", "brand": "National", "size": "900g", "category": "Branded Food", "ctr": 1, "pcs": 6, "our_cost": 3918.0, "wholesale_ctn": 4231.0, "savings": 7.4, "landed_cost": 6408.0, "kl_retail": 18.0, "kl_revenue": 7560.0, "margin": 15.2}, {"sn": 22, "product": "Pickle Mango 370g", "brand": "National", "size": "370g", "category": "Branded Food", "ctr": 1, "pcs": 12, "our_cost": 3852.0, "wholesale_ctn": 4160.0, "savings": 7.4, "landed_cost": 6342.0, "kl_retail": 9.0, "kl_revenue": 7560.0, "margin": 16.1}, {"sn": 23, "product": "Jam Apple 440g", "brand": "National", "size": "440g", "category": "Branded Food", "ctr": 1, "pcs": 12, "our_cost": 3960.0, "wholesale_ctn": 4277.0, "savings": 7.4, "landed_cost": 6450.0, "kl_retail": 10.0, "kl_revenue": 8400.0, "margin": 23.2}, {"sn": 24, "product": "Custard Banana 300g", "brand": "National", "size": "300g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 7308.0, "wholesale_ctn": 7893.0, "savings": 7.4, "landed_cost": 9798.0, "kl_retail": 6.0, "kl_revenue": 15120.0, "margin": 35.2}, {"sn": 25, "product": "Salt Iodized 800g", "brand": "National", "size": "800g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 3960.0, "wholesale_ctn": 4277.0, "savings": 7.4, "landed_cost": 6450.0, "kl_retail": 3.5, "kl_revenue": 8820.0, "margin": 26.9}, {"sn": 26, "product": "Tomato Ketchup 225g", "brand": "National", "size": "225g", "category": "Branded Food", "ctr": 1, "pcs": 24, "our_cost": 3000.0, "wholesale_ctn": 3240.0, "savings": 7.4, "landed_cost": 5490.0, "kl_retail": 4.5, "kl_revenue": 7560.0, "margin": 27.4}, {"sn": 27, "product": "Achaar Gosht 50g", "brand": "Shan", "size": "50g", "category": "Branded Food", "ctr": 1, "pcs": 60, "our_cost": 17400.0, "wholesale_ctn": 18792.0, "savings": 7.4, "landed_cost": 19890.0, "kl_retail": 7.0, "kl_revenue": 29400.0, "margin": 32.3}, {"sn": 28, "product": "Biryani Bombay 60g", "brand": "Shan", "size": "60g", "category": "Branded Food", "ctr": 1, "pcs": 60, "our_cost": 9000.0, "wholesale_ctn": 9720.0, "savings": 7.4, "landed_cost": 11490.0, "kl_retail": 5.0, "kl_revenue": 21000.0, "margin": 45.3}, {"sn": 29, "product": "Biryani Pulao 50g", "brand": "Shan", "size": "50g", "category": "Branded Food", "ctr": 1, "pcs": 60, "our_cost": 9000.0, "wholesale_ctn": 9720.0, "savings": 7.4, "landed_cost": 11490.0, "kl_retail": 5.0, "kl_revenue": 21000.0, "margin": 45.3}, {"sn": 30, "product": "Chat Masala 100g", "brand": "Shan", "size": "100g", "category": "Branded Food", "ctr": 1, "pcs": 60, "our_cost": 11400.0, "wholesale_ctn": 12312.0, "savings": 7.4, "landed_cost": 13890.0, "kl_retail": 5.5, "kl_revenue": 23100.0, "margin": 39.9}, {"sn": 31, "product": "Chapli Kabab 100g", "brand": "Shan", "size": "100g", "category": "Branded Food", "ctr": 1, "pcs": 60, "our_cost": 8340.0, "wholesale_ctn": 9007.0, "savings": 7.4, "landed_cost": 10830.0, "kl_retail": 4.5, "kl_revenue": 18900.0, "margin": 42.7}, {"sn": 32, "product": "Chicken Tandoori 50g", "brand": "Shan", "size": "50g", "category": "Branded Food", "ctr": 1, "pcs": 60, "our_cost": 9000.0, "wholesale_ctn": 9720.0, "savings": 7.4, "landed_cost": 11490.0, "kl_retail": 5.0, "kl_revenue": 21000.0, "margin": 45.3}, {"sn": 33, "product": "Qorma Masala 50g", "brand": "Shan", "size": "50g", "category": "Branded Food", "ctr": 1, "pcs": 60, "our_cost": 8400.0, "wholesale_ctn": 9072.0, "savings": 7.4, "landed_cost": 10890.0, "kl_retail": 4.5, "kl_revenue": 18900.0, "margin": 42.4}, {"sn": 34, "product": "Nihari Masala 60g", "brand": "Shan", "size": "60g", "category": "Branded Food", "ctr": 1, "pcs": 60, "our_cost": 9000.0, "wholesale_ctn": 9720.0, "savings": 7.4, "landed_cost": 11490.0, "kl_retail": 5.0, "kl_revenue": 21000.0, "margin": 45.3}, {"sn": 35, "product": "Doodh Dulari 225g", "brand": "Laziza", "size": "225g", "category": "Branded Food", "ctr": 1, "pcs": 48, "our_cost": 10800.0, "wholesale_ctn": 11664.0, "savings": 7.4, "landed_cost": 13290.0, "kl_retail": 7.0, "kl_revenue": 23520.0, "margin": 43.5}, {"sn": 36, "product": "Kheer Mix 155g", "brand": "Laziza", "size": "155g", "category": "Branded Food", "ctr": 1, "pcs": 72, "our_cost": 10800.0, "wholesale_ctn": 11664.0, "savings": 7.4, "landed_cost": 13290.0, "kl_retail": 5.5, "kl_revenue": 27720.0, "margin": 52.1}, {"sn": 37, "product": "Kheer Dry Fruits 155g", "brand": "Laziza", "size": "155g", "category": "Branded Food", "ctr": 1, "pcs": 48, "our_cost": 7440.0, "wholesale_ctn": 8035.0, "savings": 7.4, "landed_cost": 9930.0, "kl_retail": 5.5, "kl_revenue": 18480.0, "margin": 46.3}, {"sn": 38, "product": "Falooda Mix 200g", "brand": "Laziza", "size": "200g", "category": "Branded Food", "ctr": 1, "pcs": 48, "our_cost": 10080.0, "wholesale_ctn": 10886.0, "savings": 7.4, "landed_cost": 12570.0, "kl_retail": 6.5, "kl_revenue": 21840.0, "margin": 42.4}, {"sn": 39, "product": "Rasmalai Mix 75g", "brand": "Laziza", "size": "75g", "category": "Branded Food", "ctr": 1, "pcs": 48, "our_cost": 10560.0, "wholesale_ctn": 11405.0, "savings": 7.4, "landed_cost": 13050.0, "kl_retail": 6.0, "kl_revenue": 20160.0, "margin": 35.3}, {"sn": 40, "product": "Firni Khaas 150g", "brand": "Laziza", "size": "150g", "category": "Branded Food", "ctr": 1, "pcs": 48, "our_cost": 7200.0, "wholesale_ctn": 7776.0, "savings": 7.4, "landed_cost": 9690.0, "kl_retail": 5.0, "kl_revenue": 16800.0, "margin": 42.3}, {"sn": 41, "product": "Sheer Khurma 160g", "brand": "Laziza", "size": "160g", "category": "Branded Food", "ctr": 1, "pcs": 48, "our_cost": 10560.0, "wholesale_ctn": 11405.0, "savings": 7.4, "landed_cost": 13050.0, "kl_retail": 6.5, "kl_revenue": 21840.0, "margin": 40.2}, {"sn": 42, "product": "Chilli Garlic Sauce 400g", "brand": "Shangrilla", "size": "400g", "category": "Branded Food", "ctr": 1, "pcs": 24, "our_cost": 5280.0, "wholesale_ctn": 5702.0, "savings": 7.4, "landed_cost": 7770.0, "kl_retail": 7.5, "kl_revenue": 12600.0, "margin": 38.3}, {"sn": 43, "product": "Green Chili Sauce 400g", "brand": "Shangrilla", "size": "400g", "category": "Branded Food", "ctr": 1, "pcs": 12, "our_cost": 2760.0, "wholesale_ctn": 2981.0, "savings": 7.4, "landed_cost": 5250.0, "kl_retail": 7.5, "kl_revenue": 6300.0, "margin": 16.7}, {"sn": 44, "product": "Soya Sauce 750ml", "brand": "Shangrilla", "size": "750ml", "category": "Branded Food", "ctr": 1, "pcs": 12, "our_cost": 5700.0, "wholesale_ctn": 6156.0, "savings": 7.4, "landed_cost": 8190.0, "kl_retail": 13.0, "kl_revenue": 10920.0, "margin": 25.0}, {"sn": 45, "product": "Tomato Ketchup 400g", "brand": "Shangrilla", "size": "400g", "category": "Branded Food", "ctr": 1, "pcs": 24, "our_cost": 5280.0, "wholesale_ctn": 5702.0, "savings": 7.4, "landed_cost": 7770.0, "kl_retail": 7.0, "kl_revenue": 11760.0, "margin": 33.9}, {"sn": 46, "product": "Leemo Pani 375g", "brand": "Tang", "size": "375g", "category": "Branded Food", "ctr": 1, "pcs": 24, "our_cost": 7920.0, "wholesale_ctn": 8554.0, "savings": 7.4, "landed_cost": 10410.0, "kl_retail": 9.0, "kl_revenue": 15120.0, "margin": 31.2}, {"sn": 47, "product": "Mango 375g", "brand": "Tang", "size": "375g", "category": "Branded Food", "ctr": 1, "pcs": 24, "our_cost": 7920.0, "wholesale_ctn": 8554.0, "savings": 7.4, "landed_cost": 10410.0, "kl_retail": 9.0, "kl_revenue": 15120.0, "margin": 31.2}, {"sn": 48, "product": "Orange 375g", "brand": "Tang", "size": "375g", "category": "Branded Food", "ctr": 1, "pcs": 24, "our_cost": 7920.0, "wholesale_ctn": 8554.0, "savings": 7.4, "landed_cost": 10410.0, "kl_retail": 9.0, "kl_revenue": 15120.0, "margin": 31.2}, {"sn": 49, "product": "Pine Apple 375g", "brand": "Tang", "size": "375g", "category": "Branded Food", "ctr": 1, "pcs": 24, "our_cost": 7920.0, "wholesale_ctn": 8554.0, "savings": 7.4, "landed_cost": 10410.0, "kl_retail": 9.0, "kl_revenue": 15120.0, "margin": 31.2}, {"sn": 50, "product": "Danedar Hard 170g", "brand": "Tapal", "size": "170g", "category": "Branded Food", "ctr": 1, "pcs": 48, "our_cost": 18240.0, "wholesale_ctn": 19699.0, "savings": 7.4, "landed_cost": 20730.0, "kl_retail": 12.0, "kl_revenue": 40320.0, "margin": 48.6}, {"sn": 51, "product": "Danedar Pouch 430g", "brand": "Tapal", "size": "430g", "category": "Branded Food", "ctr": 1, "pcs": 24, "our_cost": 21600.0, "wholesale_ctn": 23328.0, "savings": 7.4, "landed_cost": 24090.0, "kl_retail": 25.0, "kl_revenue": 42000.0, "margin": 42.6}, {"sn": 52, "product": "Danedar Pouch 900g", "brand": "Tapal", "size": "900g", "category": "Branded Food", "ctr": 1, "pcs": 12, "our_cost": 21600.0, "wholesale_ctn": 23328.0, "savings": 7.4, "landed_cost": 24090.0, "kl_retail": 45.0, "kl_revenue": 37800.0, "margin": 36.3}, {"sn": 53, "product": "Supreme Tea 430g", "brand": "Tapal", "size": "430g", "category": "Branded Food", "ctr": 1, "pcs": 24, "our_cost": 20400.0, "wholesale_ctn": 22032.0, "savings": 7.4, "landed_cost": 22890.0, "kl_retail": 24.0, "kl_revenue": 40320.0, "margin": 43.2}, {"sn": 54, "product": "Supreme Tea 900g", "brand": "Tapal", "size": "900g", "category": "Branded Food", "ctr": 1, "pcs": 12, "our_cost": 21600.0, "wholesale_ctn": 23328.0, "savings": 7.4, "landed_cost": 24090.0, "kl_retail": 45.0, "kl_revenue": 37800.0, "margin": 36.3}, {"sn": 55, "product": "Chicken Spread 500ml", "brand": "Youngs", "size": "500ml", "category": "Branded Food", "ctr": 1, "pcs": 12, "our_cost": 7920.0, "wholesale_ctn": 8554.0, "savings": 7.4, "landed_cost": 10410.0, "kl_retail": 18.0, "kl_revenue": 15120.0, "margin": 31.2}, {"sn": 56, "product": "Mayo Garlic 500ml", "brand": "Youngs", "size": "500ml", "category": "Branded Food", "ctr": 1, "pcs": 12, "our_cost": 7140.0, "wholesale_ctn": 7711.0, "savings": 7.4, "landed_cost": 9630.0, "kl_retail": 16.0, "kl_revenue": 13440.0, "margin": 28.3}, {"sn": 57, "product": "Mayonnaise 500ml", "brand": "Youngs", "size": "500ml", "category": "Branded Food", "ctr": 1, "pcs": 12, "our_cost": 4140.0, "wholesale_ctn": 4471.0, "savings": 7.4, "landed_cost": 6630.0, "kl_retail": 10.0, "kl_revenue": 8400.0, "margin": 21.1}, {"sn": 58, "product": "Custard Banana 275g", "brand": "Rafhan", "size": "275g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 6156.0, "wholesale_ctn": 6648.0, "savings": 7.4, "landed_cost": 8646.0, "kl_retail": 5.5, "kl_revenue": 13860.0, "margin": 37.6}, {"sn": 59, "product": "Custard Mango 275g", "brand": "Rafhan", "size": "275g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 6120.0, "wholesale_ctn": 6610.0, "savings": 7.4, "landed_cost": 8610.0, "kl_retail": 5.5, "kl_revenue": 13860.0, "margin": 37.9}, {"sn": 60, "product": "Jelly Banana 75g", "brand": "Rafhan", "size": "75g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 5400.0, "wholesale_ctn": 5832.0, "savings": 7.4, "landed_cost": 7890.0, "kl_retail": 4.5, "kl_revenue": 11340.0, "margin": 30.4}, {"sn": 61, "product": "Corn Flour 275g", "brand": "Rafhan", "size": "275g", "category": "Branded Food", "ctr": 1, "pcs": 36, "our_cost": 5400.0, "wholesale_ctn": 5832.0, "savings": 7.4, "landed_cost": 7890.0, "kl_retail": 5.0, "kl_revenue": 12600.0, "margin": 37.4}, {"sn": 62, "product": "Eno Lemon Sachet 5g", "brand": "ENO", "size": "5g", "category": "Branded Food", "ctr": 1, "pcs": 864, "our_cost": 16416.0, "wholesale_ctn": 17729.0, "savings": 7.4, "landed_cost": 18906.0, "kl_retail": 1.0, "kl_revenue": 60480.0, "margin": 68.7}, {"sn": 63, "product": "Eno Orange Sachet 5g", "brand": "ENO", "size": "5g", "category": "Branded Food", "ctr": 1, "pcs": 864, "our_cost": 16416.0, "wholesale_ctn": 17729.0, "savings": 7.4, "landed_cost": 18906.0, "kl_retail": 1.0, "kl_revenue": 60480.0, "margin": 68.7}, {"sn": 64, "product": "Eno Regular Sachet 5g", "brand": "ENO", "size": "5g", "category": "Branded Food", "ctr": 1, "pcs": 864, "our_cost": 12960.0, "wholesale_ctn": 13997.0, "savings": 7.4, "landed_cost": 15450.0, "kl_retail": 0.8, "kl_revenue": 48384.0, "margin": 68.1}, {"sn": 65, "product": "Vermicelli Color 200g", "brand": "Bake Parlour", "size": "200g", "category": "Branded Food", "ctr": 1, "pcs": 48, "our_cost": 2880.0, "wholesale_ctn": 3110.0, "savings": 7.4, "landed_cost": 5370.0, "kl_retail": 3.0, "kl_revenue": 10080.0, "margin": 46.7}, {"sn": 66, "product": "Vermicelli Color 400g", "brand": "Bake Parlour", "size": "400g", "category": "Branded Food", "ctr": 1, "pcs": 24, "our_cost": 3120.0, "wholesale_ctn": 3370.0, "savings": 7.4, "landed_cost": 5610.0, "kl_retail": 5.0, "kl_revenue": 8400.0, "margin": 33.2}, {"sn": 67, "product": "Chicken Yakhni Cube 20g", "brand": "Knor", "size": "20g", "category": "Branded Food", "ctr": 1, "pcs": 120, "our_cost": 6000.0, "wholesale_ctn": 6480.0, "savings": 7.4, "landed_cost": 8490.0, "kl_retail": 2.0, "kl_revenue": 16800.0, "margin": 49.5}, {"sn": 68, "product": "Pulao Cube 18g", "brand": "Knor", "size": "18g", "category": "Branded Food", "ctr": 1, "pcs": 120, "our_cost": 8400.0, "wholesale_ctn": 9072.0, "savings": 7.4, "landed_cost": 10890.0, "kl_retail": 2.5, "kl_revenue": 21000.0, "margin": 48.1}, {"sn": 69, "product": "Essence Biryani 25ml", "brand": "SAC Essence", "size": "25ml", "category": "Branded Food", "ctr": 1, "pcs": 24, "our_cost": 1560.0, "wholesale_ctn": 1685.0, "savings": 7.4, "landed_cost": 4050.0, "kl_retail": 3.5, "kl_revenue": 5880.0, "margin": 31.1}, {"sn": 70, "product": "Essence Kewra 25ml", "brand": "SAC Essence", "size": "25ml", "category": "Branded Food", "ctr": 1, "pcs": 24, "our_cost": 2280.0, "wholesale_ctn": 2462.0, "savings": 7.4, "landed_cost": 4770.0, "kl_retail": 4.5, "kl_revenue": 7560.0, "margin": 36.9}, {"sn": 71, "product": "Prince Chocolate", "brand": "Biscuit", "size": "Half Roll", "category": "Biscuits", "ctr": 1, "pcs": 60, "our_cost": 2400.0, "wholesale_ctn": 2640.0, "savings": 9.1, "landed_cost": 4890.0, "kl_retail": 2.5, "kl_revenue": 10500.0, "margin": 53.4}, {"sn": 72, "product": "Tuc", "brand": "Biscuit", "size": "Half Roll", "category": "Biscuits", "ctr": 1, "pcs": 60, "our_cost": 2400.0, "wholesale_ctn": 2640.0, "savings": 9.1, "landed_cost": 4890.0, "kl_retail": 2.5, "kl_revenue": 10500.0, "margin": 53.4}, {"sn": 73, "product": "Candi", "brand": "Biscuit", "size": "Half Roll", "category": "Biscuits", "ctr": 1, "pcs": 60, "our_cost": 2400.0, "wholesale_ctn": 2640.0, "savings": 9.1, "landed_cost": 4890.0, "kl_retail": 2.5, "kl_revenue": 10500.0, "margin": 53.4}, {"sn": 74, "product": "Gala", "brand": "Biscuit", "size": "Half Roll", "category": "Biscuits", "ctr": 1, "pcs": 60, "our_cost": 2400.0, "wholesale_ctn": 2640.0, "savings": 9.1, "landed_cost": 4890.0, "kl_retail": 2.5, "kl_revenue": 10500.0, "margin": 53.4}, {"sn": 75, "product": "Rio", "brand": "Biscuit", "size": "Half Roll", "category": "Biscuits", "ctr": 1, "pcs": 60, "our_cost": 2400.0, "wholesale_ctn": 2640.0, "savings": 9.1, "landed_cost": 4890.0, "kl_retail": 2.5, "kl_revenue": 10500.0, "margin": 53.4}, {"sn": 76, "product": "Sooper", "brand": "Biscuit", "size": "Half Roll", "category": "Biscuits", "ctr": 1, "pcs": 60, "our_cost": 2400.0, "wholesale_ctn": 2640.0, "savings": 9.1, "landed_cost": 4890.0, "kl_retail": 2.5, "kl_revenue": 10500.0, "margin": 53.4}, {"sn": 77, "product": "Cocomo", "brand": "Biscuit", "size": "Half Roll", "category": "Biscuits", "ctr": 1, "pcs": 60, "our_cost": 5400.0, "wholesale_ctn": 5940.0, "savings": 9.1, "landed_cost": 7890.0, "kl_retail": 4.0, "kl_revenue": 16800.0, "margin": 53.0}, {"sn": 78, "product": "Gulab Jaman 1kg", "brand": "Rehmat-e-Shereen", "size": "1kg", "category": "Sweets", "ctr": 1, "pcs": 12, "our_cost": 15120.0, "wholesale_ctn": 16027.0, "savings": 5.7, "landed_cost": 17610.0, "kl_retail": 35.0, "kl_revenue": 29400.0, "margin": 40.1}, {"sn": 79, "product": "Cham Cham 1kg", "brand": "Rehmat-e-Shereen", "size": "1kg", "category": "Sweets", "ctr": 1, "pcs": 12, "our_cost": 32400.0, "wholesale_ctn": 34344.0, "savings": 5.7, "landed_cost": 34890.0, "kl_retail": 70.0, "kl_revenue": 58800.0, "margin": 40.7}, {"sn": 80, "product": "Rasgulla 1kg", "brand": "Rehmat-e-Shereen", "size": "1kg", "category": "Sweets", "ctr": 1, "pcs": 12, "our_cost": 14400.0, "wholesale_ctn": 15264.0, "savings": 5.7, "landed_cost": 16890.0, "kl_retail": 32.0, "kl_revenue": 26880.0, "margin": 37.2}, {"sn": 81, "product": "Dahi Boondi 200g", "brand": "Ambala", "size": "200g", "category": "Sweets", "ctr": 1, "pcs": 24, "our_cost": 6000.0, "wholesale_ctn": 6360.0, "savings": 5.7, "landed_cost": 8490.0, "kl_retail": 8.0, "kl_revenue": 13440.0, "margin": 36.8}, {"sn": 82, "product": "Special Mix 200g", "brand": "Ambala", "size": "200g", "category": "Sweets", "ctr": 1, "pcs": 24, "our_cost": 6960.0, "wholesale_ctn": 7378.0, "savings": 5.7, "landed_cost": 9450.0, "kl_retail": 8.5, "kl_revenue": 14280.0, "margin": 33.8}, {"sn": 83, "product": "Cake Rusk 350g", "brand": "Ambala", "size": "350g", "category": "Sweets", "ctr": 1, "pcs": 24, "our_cost": 12240.0, "wholesale_ctn": 12974.0, "savings": 5.7, "landed_cost": 14730.0, "kl_retail": 14.0, "kl_revenue": 23520.0, "margin": 37.4}, {"sn": 84, "product": "Tea Rusk 220g", "brand": "Ambala", "size": "220g", "category": "Sweets", "ctr": 1, "pcs": 24, "our_cost": 6000.0, "wholesale_ctn": 6360.0, "savings": 5.7, "landed_cost": 8490.0, "kl_retail": 7.5, "kl_revenue": 12600.0, "margin": 32.6}, {"sn": 85, "product": "Naan Khatai 200g", "brand": "Ambala", "size": "200g", "category": "Sweets", "ctr": 1, "pcs": 24, "our_cost": 8400.0, "wholesale_ctn": 8904.0, "savings": 5.7, "landed_cost": 10890.0, "kl_retail": 10.0, "kl_revenue": 16800.0, "margin": 35.2}, {"sn": 86, "product": "Aloo Bukhara", "brand": "Bulk", "size": "1kg", "category": "Bulk Spices", "ctr": 1, "pcs": 1, "our_cost": 1200.0, "wholesale_ctn": 1380.0, "savings": 13.0, "landed_cost": 3690.0, "kl_retail": 50.0, "kl_revenue": 3500.0, "margin": -5.4}, {"sn": 87, "product": "Anar Dana", "brand": "Bulk", "size": "1kg", "category": "Bulk Spices", "ctr": 1, "pcs": 1, "our_cost": 799.0, "wholesale_ctn": 919.0, "savings": 13.1, "landed_cost": 3289.0, "kl_retail": 35.0, "kl_revenue": 2450.0, "margin": -34.2}, {"sn": 88, "product": "Red Chilli Powder", "brand": "Bulk", "size": "1kg", "category": "Bulk Spices", "ctr": 1, "pcs": 1, "our_cost": 1590.0, "wholesale_ctn": 1828.0, "savings": 13.0, "landed_cost": 4080.0, "kl_retail": 60.0, "kl_revenue": 4200.0, "margin": 2.9}, {"sn": 89, "product": "Garam Masala", "brand": "Bulk", "size": "1kg", "category": "Bulk Spices", "ctr": 1, "pcs": 1, "our_cost": 1350.0, "wholesale_ctn": 1552.0, "savings": 13.0, "landed_cost": 3840.0, "kl_retail": 55.0, "kl_revenue": 3850.0, "margin": 0.3}, {"sn": 90, "product": "Black Cardemom", "brand": "Bulk", "size": "1kg", "category": "Bulk Spices", "ctr": 1, "pcs": 1, "our_cost": 850.0, "wholesale_ctn": 977.0, "savings": 13.0, "landed_cost": 3340.0, "kl_retail": 40.0, "kl_revenue": 2800.0, "margin": -19.3}, {"sn": 91, "product": "Chilghoza", "brand": "Bulk", "size": "1kg", "category": "Bulk Spices", "ctr": 1, "pcs": 1, "our_cost": 12000.0, "wholesale_ctn": 13800.0, "savings": 13.0, "landed_cost": 14490.0, "kl_retail": 350.0, "kl_revenue": 24500.0, "margin": 40.9}, {"sn": 92, "product": "Anjeer", "brand": "Bulk", "size": "1kg", "category": "Bulk Spices", "ctr": 1, "pcs": 1, "our_cost": 4800.0, "wholesale_ctn": 5520.0, "savings": 13.0, "landed_cost": 7290.0, "kl_retail": 180.0, "kl_revenue": 12600.0, "margin": 42.1}, {"sn": 93, "product": "Phool Makhana", "brand": "Bulk", "size": "1kg", "category": "Bulk Spices", "ctr": 1, "pcs": 1, "our_cost": 10000.0, "wholesale_ctn": 11500.0, "savings": 13.0, "landed_cost": 12490.0, "kl_retail": 300.0, "kl_revenue": 21000.0, "margin": 40.5}, {"sn": 94, "product": "Almond Oil 100ml", "brand": "Marhaba", "size": "100ml", "category": "Cosmetics", "ctr": 2, "pcs": 24, "our_cost": 22488.0, "wholesale_ctn": 25187.0, "savings": 10.7, "landed_cost": 24978.0, "kl_retail": 30.0, "kl_revenue": 50400.0, "margin": 50.4}, {"sn": 95, "product": "Almond Oil 50ml", "brand": "Marhaba", "size": "50ml", "category": "Cosmetics", "ctr": 2, "pcs": 48, "our_cost": 24792.0, "wholesale_ctn": 27767.0, "savings": 10.7, "landed_cost": 27282.0, "kl_retail": 18.0, "kl_revenue": 60480.0, "margin": 54.9}, {"sn": 96, "product": "Castor Oil 50ml", "brand": "Marhaba", "size": "50ml", "category": "Cosmetics", "ctr": 2, "pcs": 48, "our_cost": 5913.6, "wholesale_ctn": 6623.0, "savings": 10.7, "landed_cost": 8403.6, "kl_retail": 5.0, "kl_revenue": 16800.0, "margin": 50.0}, {"sn": 97, "product": "Clove Oil 8ml", "brand": "Marhaba", "size": "8ml", "category": "Cosmetics", "ctr": 2, "pcs": 48, "our_cost": 8774.4, "wholesale_ctn": 9827.0, "savings": 10.7, "landed_cost": 11264.4, "kl_retail": 7.0, "kl_revenue": 23520.0, "margin": 52.1}, {"sn": 98, "product": "Kalonji Oil 50ml", "brand": "Marhaba", "size": "50ml", "category": "Cosmetics", "ctr": 2, "pcs": 48, "our_cost": 14496.0, "wholesale_ctn": 16236.0, "savings": 10.7, "landed_cost": 16986.0, "kl_retail": 10.0, "kl_revenue": 33600.0, "margin": 49.4}, {"sn": 99, "product": "Muraba Amla 500g", "brand": "Marhaba", "size": "500g", "category": "Cosmetics", "ctr": 2, "pcs": 12, "our_cost": 4134.0, "wholesale_ctn": 4630.0, "savings": 10.7, "landed_cost": 6624.0, "kl_retail": 12.0, "kl_revenue": 10080.0, "margin": 34.3}, {"sn": 100, "product": "Ispagol Small 25g", "brand": "Marhaba", "size": "25g", "category": "Cosmetics", "ctr": 2, "pcs": 48, "our_cost": 7140.0, "wholesale_ctn": 7997.0, "savings": 10.7, "landed_cost": 9630.0, "kl_retail": 5.5, "kl_revenue": 18480.0, "margin": 47.9}, {"sn": 101, "product": "Ispagol Mini Jar 95g", "brand": "Marhaba", "size": "95g", "category": "Cosmetics", "ctr": 2, "pcs": 24, "our_cost": 13267.2, "wholesale_ctn": 14859.0, "savings": 10.7, "landed_cost": 15757.2, "kl_retail": 20.0, "kl_revenue": 33600.0, "margin": 53.1}, {"sn": 102, "product": "Rose Water 240ml", "brand": "Marhaba", "size": "240ml", "category": "Cosmetics", "ctr": 2, "pcs": 24, "our_cost": 2772.0, "wholesale_ctn": 3105.0, "savings": 10.7, "landed_cost": 5262.0, "kl_retail": 5.0, "kl_revenue": 8400.0, "margin": 37.4}, {"sn": 103, "product": "Rose Water 800ml", "brand": "Marhaba", "size": "800ml", "category": "Cosmetics", "ctr": 2, "pcs": 12, "our_cost": 2760.0, "wholesale_ctn": 3091.0, "savings": 10.7, "landed_cost": 5250.0, "kl_retail": 9.0, "kl_revenue": 7560.0, "margin": 30.6}, {"sn": 104, "product": "Sharbat Anar 800ml", "brand": "Marhaba", "size": "800ml", "category": "Cosmetics", "ctr": 2, "pcs": 12, "our_cost": 5663.4, "wholesale_ctn": 6343.0, "savings": 10.7, "landed_cost": 8153.4, "kl_retail": 16.0, "kl_revenue": 13440.0, "margin": 39.3}, {"sn": 105, "product": "Balm", "brand": "Marhaba", "size": "Jar", "category": "Cosmetics", "ctr": 2, "pcs": 48, "our_cost": 3816.0, "wholesale_ctn": 4274.0, "savings": 10.7, "landed_cost": 6306.0, "kl_retail": 4.0, "kl_revenue": 13440.0, "margin": 53.1}, {"sn": 106, "product": "Gulqand 500g", "brand": "Marhaba", "size": "500g", "category": "Cosmetics", "ctr": 2, "pcs": 12, "our_cost": 3261.0, "wholesale_ctn": 3652.0, "savings": 10.7, "landed_cost": 5751.0, "kl_retail": 10.0, "kl_revenue": 8400.0, "margin": 31.5}, {"sn": 107, "product": "Toot Sia", "brand": "Marhaba", "size": "Bottle", "category": "Cosmetics", "ctr": 2, "pcs": 48, "our_cost": 4644.0, "wholesale_ctn": 5201.0, "savings": 10.7, "landed_cost": 7134.0, "kl_retail": 5.0, "kl_revenue": 16800.0, "margin": 57.5}, {"sn": 108, "product": "Gastofil Syrup", "brand": "Hamdard", "size": "Bottle", "category": "Cosmetics", "ctr": 2, "pcs": 24, "our_cost": 2880.0, "wholesale_ctn": 3226.0, "savings": 10.7, "landed_cost": 5370.0, "kl_retail": 5.0, "kl_revenue": 8400.0, "margin": 36.1}, {"sn": 109, "product": "Sharbat-e-Folad", "brand": "Hamdard", "size": "Bottle", "category": "Cosmetics", "ctr": 2, "pcs": 24, "our_cost": 4320.0, "wholesale_ctn": 4838.0, "savings": 10.7, "landed_cost": 6810.0, "kl_retail": 7.0, "kl_revenue": 11760.0, "margin": 42.1}, {"sn": 110, "product": "Toot Siah 120ml", "brand": "Hamdard", "size": "120ml", "category": "Cosmetics", "ctr": 2, "pcs": 48, "our_cost": 5664.0, "wholesale_ctn": 6344.0, "savings": 10.7, "landed_cost": 8154.0, "kl_retail": 4.5, "kl_revenue": 15120.0, "margin": 46.1}, {"sn": 111, "product": "Jam-e-Shireen 800ml", "brand": "Hamdard", "size": "800ml", "category": "Cosmetics", "ctr": 2, "pcs": 12, "our_cost": 5589.0, "wholesale_ctn": 6260.0, "savings": 10.7, "landed_cost": 8079.0, "kl_retail": 16.0, "kl_revenue": 13440.0, "margin": 39.9}, {"sn": 112, "product": "Rooh Afza 800ml", "brand": "Hamdard", "size": "800ml", "category": "Cosmetics", "ctr": 2, "pcs": 12, "our_cost": 5412.0, "wholesale_ctn": 6061.0, "savings": 10.7, "landed_cost": 7902.0, "kl_retail": 15.0, "kl_revenue": 12600.0, "margin": 37.3}, {"sn": 113, "product": "Safi Syrup", "brand": "Hamdard", "size": "Bottle", "category": "Cosmetics", "ctr": 2, "pcs": 24, "our_cost": 4174.8, "wholesale_ctn": 4676.0, "savings": 10.7, "landed_cost": 6664.8, "kl_retail": 7.0, "kl_revenue": 11760.0, "margin": 43.3}, {"sn": 114, "product": "Labob-e-Khas", "brand": "Hamdard", "size": "Bottle", "category": "Cosmetics", "ctr": 2, "pcs": 12, "our_cost": 8640.0, "wholesale_ctn": 9677.0, "savings": 10.7, "landed_cost": 11130.0, "kl_retail": 25.0, "kl_revenue": 21000.0, "margin": 47.0}, {"sn": 115, "product": "Too Gud Rich Egg Milk", "brand": "Innovative", "size": "Pack", "category": "Biscuits", "ctr": 2, "pcs": 18, "our_cost": 3543.0, "wholesale_ctn": 3897.0, "savings": 9.1, "landed_cost": 6033.0, "kl_retail": 3.5, "kl_revenue": 4410.0, "margin": -36.8}, {"sn": 116, "product": "Charm Chocolate", "brand": "Innovative", "size": "Pack", "category": "Biscuits", "ctr": 2, "pcs": 18, "our_cost": 3543.0, "wholesale_ctn": 3897.0, "savings": 9.1, "landed_cost": 6033.0, "kl_retail": 3.5, "kl_revenue": 4410.0, "margin": -36.8}, {"sn": 117, "product": "Goodies Eggs & Milk", "brand": "Innovative", "size": "Pack", "category": "Biscuits", "ctr": 2, "pcs": 18, "our_cost": 3543.0, "wholesale_ctn": 3897.0, "savings": 9.1, "landed_cost": 6033.0, "kl_retail": 3.5, "kl_revenue": 4410.0, "margin": -36.8}, {"sn": 118, "product": "Crust Wafers (all flavors)", "brand": "Innovative", "size": "Pack", "category": "Biscuits", "ctr": 2, "pcs": 18, "our_cost": 3543.0, "wholesale_ctn": 3897.0, "savings": 9.1, "landed_cost": 6033.0, "kl_retail": 3.5, "kl_revenue": 4410.0, "margin": -36.8}, {"sn": 119, "product": "Frisky Wafer (all flavors)", "brand": "Innovative", "size": "Pack", "category": "Biscuits", "ctr": 2, "pcs": 48, "our_cost": 5904.0, "wholesale_ctn": 6494.0, "savings": 9.1, "landed_cost": 8394.0, "kl_retail": 5.0, "kl_revenue": 16800.0, "margin": 50.0}, {"sn": 120, "product": "Samsol Color Small", "brand": "Samsol", "size": "Small", "category": "Cosmetics", "ctr": 2, "pcs": 144, "our_cost": 18432.0, "wholesale_ctn": 20644.0, "savings": 10.7, "landed_cost": 20922.0, "kl_retail": 4.5, "kl_revenue": 45360.0, "margin": 53.9}, {"sn": 121, "product": "Samsol Color Large", "brand": "Samsol", "size": "Large", "category": "Cosmetics", "ctr": 2, "pcs": 144, "our_cost": 34560.0, "wholesale_ctn": 38707.0, "savings": 10.7, "landed_cost": 37050.0, "kl_retail": 8.0, "kl_revenue": 80640.0, "margin": 54.1}, {"sn": 122, "product": "Olivia Color", "brand": "Olivia", "size": "Pack", "category": "Cosmetics", "ctr": 2, "pcs": 144, "our_cost": 34560.0, "wholesale_ctn": 38707.0, "savings": 10.7, "landed_cost": 37050.0, "kl_retail": 8.0, "kl_revenue": 80640.0, "margin": 54.1}, {"sn": 123, "product": "Tibet Snow", "brand": "Tibet Snow", "size": "Pack", "category": "Cosmetics", "ctr": 2, "pcs": 144, "our_cost": 27360.0, "wholesale_ctn": 30643.0, "savings": 10.7, "landed_cost": 29850.0, "kl_retail": 6.0, "kl_revenue": 60480.0, "margin": 50.6}, {"sn": 124, "product": "Faiza Beauty Cream", "brand": "Faiza", "size": "Pack", "category": "Cosmetics", "ctr": 2, "pcs": 144, "our_cost": 34560.0, "wholesale_ctn": 38707.0, "savings": 10.7, "landed_cost": 37050.0, "kl_retail": 8.0, "kl_revenue": 80640.0, "margin": 54.1}, {"sn": 125, "product": "Stillmans Cream", "brand": "Stillmans", "size": "Pack", "category": "Cosmetics", "ctr": 2, "pcs": 144, "our_cost": 53280.0, "wholesale_ctn": 59674.0, "savings": 10.7, "landed_cost": 55770.0, "kl_retail": 12.0, "kl_revenue": 120960.0, "margin": 53.9}, {"sn": 126, "product": "Bio Amla Oil Small", "brand": "Bio", "size": "Small", "category": "Cosmetics", "ctr": 2, "pcs": 144, "our_cost": 15840.0, "wholesale_ctn": 17741.0, "savings": 10.7, "landed_cost": 18330.0, "kl_retail": 4.0, "kl_revenue": 40320.0, "margin": 54.5}];
 const SUPPLIERS = [{"name": "Bulk Payment (Multi)", "amount": 2058080, "ctr": "C1", "products": "Shan,Tang,Youngs,Tapal,Knorr,Laziza,ENO"}, {"name": "Marhaba/Haq Traders", "amount": 1003355, "ctr": "C2", "products": "Marhaba Products"}, {"name": "Pansar Items/Sabir", "amount": 742000, "ctr": "C1", "products": "Pansar Items"}, {"name": "SABA SABA Trading", "amount": 725000, "ctr": "C2", "products": "Everyday Products"}, {"name": "Qarshi/Haq Traders", "amount": 533600, "ctr": "C2", "products": "Qarshi Products"}, {"name": "Shan Distributor", "amount": 491225, "ctr": "C1", "products": "Nestle FIV + Milkpak"}, {"name": "Laziza Bill", "amount": 458600, "ctr": "C1", "products": "Laziza Products"}, {"name": "Imran Patni (Spices)", "amount": 386250, "ctr": "C1", "products": "Basic Spices Balance"}, {"name": "Pansar Bill (advance)", "amount": 342200, "ctr": "C1", "products": "Pansar Items"}, {"name": "Spices/Muhammad Imran", "amount": 332500, "ctr": "C1", "products": "Spices (advance)"}, {"name": "Innovative Biscuits/Hamza", "amount": 306454, "ctr": "C2", "products": "Biscuits"}, {"name": "MS Traders", "amount": 80482, "ctr": "C1", "products": "Medical/FMCG"}];
@@ -199,17 +199,17 @@ const DISC = [{"category": "SB Invoice Items", "finding": "All 14 items from SB 
 const C1M = [{"product": "Basic Spices", "supplier": "Muhammad Rashid (for MHK)", "amount": 100000.0, "pct": 1.1}, {"product": "Basic Spices Balance", "supplier": "Imran Patni", "amount": 386250.0, "pct": 4.2}, {"product": "Biscuits", "supplier": "Muhammad Rashid", "amount": 202450.0, "pct": 2.2}, {"product": "Biscuits Balance", "supplier": "Unknown", "amount": 300000.0, "pct": 3.2}, {"product": "Bulk Payment - Multiple Suppliers", "supplier": "Multiple suppliers (Shan, Tang, Youngs, Tapal, Knorr, Laziza, ENO, Metromilan)", "amount": 2058080.0, "pct": 22.1}, {"product": "C1 Payments (audio/image receipts, not text-extractable)", "supplier": "Multiple Suppliers", "amount": 3907170.0, "pct": 42.0}, {"product": "Candies", "supplier": "Muhammad Rashid", "amount": 108000.0, "pct": 1.2}, {"product": "Candies Balance", "supplier": "Unknown", "amount": 200000.0, "pct": 2.2}, {"product": "Laziza Bill (advance)", "supplier": "Laziza supplier", "amount": 458600.0, "pct": 4.9}, {"product": "Pansar Items + Transportation", "supplier": "Sabir", "amount": 742000.0, "pct": 8.0}, {"product": "Pansar Items Bill (advance)", "supplier": "Unknown Pansar supplier", "amount": 342200.0, "pct": 3.7}, {"product": "Petty Cash", "supplier": "Faraz TP", "amount": 42000.0, "pct": 0.5}, {"product": "Sonf Coloured Balance", "supplier": "M Nadeem Bashir", "amount": 23000.0, "pct": 0.2}, {"product": "Spices Bill (advance)", "supplier": "Muhammad Imran", "amount": 332500.0, "pct": 3.6}, {"product": "Sticker Pasting", "supplier": "Unknown", "amount": 75000.0, "pct": 0.8}, {"product": "Tarpal + Tape", "supplier": "Unknown", "amount": 12600.0, "pct": 0.1}, {"product": "Transportation Charges", "supplier": "Multiple", "amount": 4000.0, "pct": 0.0}];
 const C2M = [{"product": "Hamdard Products", "supplier": "Haq Traders", "amount": 228726.0, "pct": 10.2}, {"product": "Innovative Biscuits", "supplier": "Hamza Arshad", "amount": 306454.0, "pct": 13.7}, {"product": "Marhaba Products", "supplier": "Haq Traders", "amount": 1003355.0, "pct": 44.8}, {"product": "Qarshi Products", "supplier": "Haq Traders", "amount": 533600.0, "pct": 23.8}, {"product": "Supari Bill EXP 352", "supplier": "Muhammad Rashid", "amount": 166400.0, "pct": 7.4}];
 const FIN = {"c1Cost": 9293850, "c2Cost": 2238535, "totalCost": 11532385, "c1Landed": 990273, "c2Landed": 481439, "c1Revenue": 1647044, "c2Revenue": 952560, "totalExpenses": 145047};
-
+ 
 const COLORS = ['#00d4aa','#ff6b6b','#4ecdc4','#ffd93d','#6c5ce7','#a29bfe','#fd79a8','#00b894','#e17055','#74b9ff','#fab1a0','#81ecec','#dfe6e9','#ffeaa7','#55efc4','#636e72','#b2bec3','#fdcb6e','#e84393','#0984e3','#d63031','#00cec9','#e17055','#2d3436','#6c5ce7'];
-
+ 
 // Populate filter dropdowns
 const cats = [...new Set(ITEMS.map(i=>i.category))].sort();
 const brands = [...new Set(ITEMS.map(i=>i.brand))].sort();
 cats.forEach(c => { const o=document.createElement('option'); o.value=c; o.textContent=c; document.getElementById('fCat').appendChild(o); });
 brands.forEach(b => { const o=document.createElement('option'); o.value=b; o.textContent=b; document.getElementById('fBrand').appendChild(o); });
-
+ 
 let charts = {};
-
+ 
 function filtered() {
   let d = [...ITEMS];
   const ctr = document.getElementById('fCtr').value;
@@ -220,10 +220,10 @@ function filtered() {
   if(brand!=='all') d = d.filter(i=>i.brand===brand);
   return d;
 }
-
+ 
 function fmt(n) { return n.toLocaleString('en-PK'); }
 function fmtM(n) { return n>=1000000 ? (n/1000000).toFixed(1)+'M' : n>=1000 ? (n/1000).toFixed(0)+'K' : n.toString(); }
-
+ 
 function updateKPIs(data) {
   const totalCost = data.reduce((s,i)=>s+i.our_cost,0);
   const totalLanded = data.reduce((s,i)=>s+i.landed_cost,0);
@@ -237,7 +237,7 @@ function updateKPIs(data) {
     const ctr=document.getElementById('fCtr').value;
     return ctr==='all' || s.ctr==='C'+ctr;
   }).map(s=>s.name)).size;
-
+ 
   document.getElementById('kpiSection').innerHTML = `
     <div class="kpi"><div class="lb">Procurement Cost</div><div class="vl">PKR ${fmtM(totalCost)}</div><div class="sm">${data.length} items</div></div>
     <div class="kpi"><div class="lb">Landed Cost</div><div class="vl">PKR ${fmtM(totalLanded)}</div><div class="sm">Incl. freight & duties</div></div>
@@ -249,9 +249,9 @@ function updateKPIs(data) {
     <div class="kpi"><div class="lb">Expenses</div><div class="vl">PKR ${fmtM(FIN.totalExpenses)}</div><div class="sm neg">6 bill entries</div></div>
   `;
 }
-
+ 
 function destroyChart(key) { if(charts[key]) { charts[key].destroy(); delete charts[key]; } }
-
+ 
 function chartOpts(title, type) {
   return {
     responsive: true, maintainAspectRatio: false,
@@ -262,7 +262,7 @@ function chartOpts(title, type) {
     } : undefined
   };
 }
-
+ 
 function updateCharts(data) {
   // Category spend
   const catMap = {};
@@ -273,7 +273,7 @@ function updateCharts(data) {
     type:'bar', data:{labels:catLabels, datasets:[{label:'Cost (PKR)',data:catLabels.map(c=>catMap[c]),backgroundColor:COLORS.slice(0,catLabels.length),borderRadius:4}]},
     options:{...chartOpts('','bar'),indexAxis:'y',plugins:{legend:{display:false}}}
   });
-
+ 
   // Brand distribution (doughnut)
   const brandMap = {};
   data.forEach(i => { brandMap[i.brand] = (brandMap[i.brand]||0) + 1; });
@@ -283,7 +283,7 @@ function updateCharts(data) {
     type:'doughnut', data:{labels:bLabels, datasets:[{data:bLabels.map(b=>brandMap[b]),backgroundColor:COLORS.slice(0,bLabels.length),borderWidth:0}]},
     options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{color:'#8899aa',font:{size:9},boxWidth:10}}}}
   });
-
+ 
   // Container cost breakdown
   const ctrMap = {};
   data.forEach(i => { const k='C'+i.ctr; ctrMap[k]=(ctrMap[k]||{cost:0,landed:0,rev:0}); ctrMap[k].cost+=i.our_cost; ctrMap[k].landed+=i.landed_cost; ctrMap[k].rev+=i.kl_revenue; });
@@ -297,7 +297,7 @@ function updateCharts(data) {
     ]},
     options:{...chartOpts('','bar'),plugins:{legend:{display:true,labels:{color:'#8899aa',font:{size:10}}}}}
   });
-
+ 
   // Supplier bar
   const sups = [...SUPPLIERS].sort((a,b)=>b.amount-a.amount);
   destroyChart('supplierBar');
@@ -305,7 +305,7 @@ function updateCharts(data) {
     type:'bar', data:{labels:sups.map(s=>s.name.length>20?s.name.slice(0,18)+'..':s.name), datasets:[{label:'Amount (PKR)',data:sups.map(s=>s.amount),backgroundColor:sups.map(s=>s.ctr==='C1'?'#00d4aa':'#6c5ce7'),borderRadius:3}]},
     options:{...chartOpts('','bar'),indexAxis:'y',plugins:{legend:{display:false}}}
   });
-
+ 
   // Top margin items
   const sorted = [...data].sort((a,b)=>b.margin-a.margin).slice(0,15);
   destroyChart('marginBar');
@@ -313,7 +313,7 @@ function updateCharts(data) {
     type:'bar', data:{labels:sorted.map(i=>i.product.slice(0,22)), datasets:[{label:'Margin %',data:sorted.map(i=>i.margin),backgroundColor:sorted.map(i=>i.margin>40?'#00d4aa':i.margin>25?'#ffd93d':'#ff6b6b'),borderRadius:3}]},
     options:{...chartOpts('','bar'),indexAxis:'y',plugins:{legend:{display:false}}}
   });
-
+ 
   // Price comparison
   const sampleItems = [...data].sort((a,b)=>b.our_cost-a.our_cost).slice(0,12);
   destroyChart('priceComp');
@@ -324,7 +324,7 @@ function updateCharts(data) {
     ]},
     options:{...chartOpts('','bar'),plugins:{legend:{display:true,labels:{color:'#8899aa',font:{size:10}}}},scales:{x:{ticks:{color:'#8899aa',font:{size:8},maxRotation:45}},y:{ticks:{color:'#8899aa',font:{size:9}},grid:{color:'rgba(255,255,255,.04)'}}}}
   });
-
+ 
   // Category x Container stacked
   const catCtrData = {};
   data.forEach(i => {
@@ -338,7 +338,7 @@ function updateCharts(data) {
     type:'bar', data:{labels:allCats, datasets:ctrs.map((c,idx)=>({label:c,data:allCats.map(cat=>catCtrData[cat][c]||0),backgroundColor:idx===0?'#00d4aa':'#6c5ce7',borderRadius:2}))},
     options:{...chartOpts('','bar'),plugins:{legend:{display:true,labels:{color:'#8899aa',font:{size:10}}}},scales:{x:{stacked:true,ticks:{color:'#8899aa',font:{size:9}}},y:{stacked:true,ticks:{color:'#8899aa',font:{size:9}},grid:{color:'rgba(255,255,255,.04)'}}}}
   });
-
+ 
   // Brand polar
   const topBrands = bLabels.slice(0,10);
   destroyChart('brandPolar');
@@ -347,7 +347,7 @@ function updateCharts(data) {
     options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{color:'#8899aa',font:{size:9},boxWidth:10}}},scales:{r:{ticks:{display:false},grid:{color:'rgba(255,255,255,.06)'}}}}
   });
 }
-
+ 
 function updatePacking() {
   const activeCtr = document.querySelector('.tab.active')?.dataset.ctr || '1';
   const manifest = activeCtr==='1' ? C1M : C2M;
@@ -357,26 +357,26 @@ function updatePacking() {
   const tbody = document.getElementById('packTable').querySelector('tbody');
   tbody.innerHTML = manifest.map(m => `<tr><td>${m.product}</td><td>${m.supplier}</td><td style="text-align:right">PKR ${fmt(m.amount)}</td><td style="text-align:right">${m.pct.toFixed(1)}%</td></tr>`).join('') +
     `<tr style="font-weight:700;border-top:2px solid var(--a1)"><td>TOTAL</td><td></td><td style="text-align:right;color:var(--a1)">PKR ${fmt(total)}</td><td style="text-align:right">100%</td></tr>`;
-
+ 
   // Items table for this container
   const ctrItems = ITEMS.filter(i=>i.ctr==activeCtr);
   document.getElementById('itemsBadge').textContent = `${ctrItems.length} items — Container ${activeCtr}`;
   const itbody = document.getElementById('itemsTable').querySelector('tbody');
   itbody.innerHTML = ctrItems.map(i => `<tr><td>${i.sn}</td><td>${i.product}</td><td>${i.brand}</td><td>${i.size}</td><td>${i.category}</td><td>${i.pcs}</td><td style="text-align:right">PKR ${fmt(i.our_cost)}</td><td style="text-align:right">PKR ${fmt(Math.round(i.landed_cost))}</td><td style="text-align:right">PKR ${fmt(Math.round(i.kl_revenue))}</td><td style="text-align:right" class="${i.margin>40?'sok':i.margin>20?'swarn':'shigh'}">${i.margin.toFixed(1)}%</td></tr>`).join('');
 }
-
+ 
 function updateProfit(data) {
   const totalCost = data.reduce((s,i)=>s+i.our_cost,0);
   const totalLanded = data.reduce((s,i)=>s+i.landed_cost,0);
   const totalRev = data.reduce((s,i)=>s+i.kl_revenue,0);
   const grossProfit = totalRev - totalLanded;
   const netProfit = grossProfit - FIN.totalExpenses;
-
+ 
   // Expense table
   const etbody = document.getElementById('expTable').querySelector('tbody');
   etbody.innerHTML = EXPENSES.map(e => `<tr><td>${e.date}</td><td>${e.desc}</td><td style="text-align:right">PKR ${fmt(e.amount)}</td></tr>`).join('');
   document.getElementById('expTotal').textContent = fmt(FIN.totalExpenses);
-
+ 
   // P&L chart
   destroyChart('plChart');
   charts.plChart = new Chart(document.getElementById('plChart'), {
@@ -386,7 +386,7 @@ function updateProfit(data) {
     }]},
     options:{...chartOpts('','bar'),plugins:{legend:{display:false}}}
   });
-
+ 
   // Waterfall
   const wfLabels = ['Procurement','+ Freight/Duty','= Landed Cost','KL Revenue','- Landed','= Gross Profit','- Expenses','= Net Profit'];
   const freightDuty = totalLanded - totalCost;
@@ -396,7 +396,7 @@ function updateProfit(data) {
     type:'bar', data:{labels:wfLabels, datasets:[{data:wfData, backgroundColor:wfData.map(v=>v>=0?'#00d4aa':'#ff6b6b'),borderRadius:3}]},
     options:{...chartOpts('','bar'),plugins:{legend:{display:false}},scales:{x:{ticks:{color:'#8899aa',font:{size:8},maxRotation:45}},y:{ticks:{color:'#8899aa',font:{size:9},callback:v=>'PKR '+fmtM(Math.abs(v))},grid:{color:'rgba(255,255,255,.04)'}}}}
   });
-
+ 
   // Profit bars per container
   const c1Items = data.filter(i=>i.ctr===1);
   const c2Items = data.filter(i=>i.ctr===2);
@@ -406,7 +406,7 @@ function updateProfit(data) {
   const c2Land = c2Items.reduce((s,i)=>s+i.landed_cost,0);
   const c1Profit = c1Rev - c1Land;
   const c2Profit = c2Rev - c2Land;
-
+ 
   document.getElementById('profitBars').innerHTML = `
     <div style="margin-bottom:14px">
       <div style="font-size:11px;color:var(--t2);margin-bottom:4px">Container 1 — Revenue PKR ${fmtM(c1Rev)}</div>
@@ -417,7 +417,7 @@ function updateProfit(data) {
       <div class="profit-bar"><div style="width:${c2Land/c2Rev*100}%;background:#ff6b6b">Cost ${(c2Land/c2Rev*100).toFixed(0)}%</div><div style="width:${c2Profit/c2Rev*100}%;background:#00d4aa">Profit ${(c2Profit/c2Rev*100).toFixed(0)}%</div></div>
     </div>
   `;
-
+ 
   // Profit donut
   destroyChart('profitDonut');
   charts.profitDonut = new Chart(document.getElementById('profitDonut'), {
@@ -425,7 +425,7 @@ function updateProfit(data) {
     options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{color:'#8899aa',font:{size:10},boxWidth:12}}}}
   });
 }
-
+ 
 function updateRV() {
   const tbody = document.getElementById('rvTable').querySelector('tbody');
   tbody.innerHTML = RV.map(r => {
@@ -433,7 +433,7 @@ function updateRV() {
     return `<tr><td>${r.product}</td><td>${r.brand}</td><td>${r.src}</td><td>${r.supplier}</td><td style="text-align:right">${fmt(r.rate)}</td><td style="text-align:right">${fmt(r.reported)}</td><td style="text-align:right" class="${cls}">${fmt(r.diff)}</td><td style="text-align:right" class="${cls}">${r.diffPct}%</td><td class="${cls}">${r.status||'—'}</td></tr>`;
   }).join('');
 }
-
+ 
 function updateDisc() {
   const tbody = document.getElementById('discTable').querySelector('tbody');
   tbody.innerHTML = DISC.map(d => {
@@ -441,7 +441,7 @@ function updateDisc() {
     return `<tr><td>${d.category}</td><td style="max-width:280px">${d.finding}</td><td class="${cls}">${d.severity}</td><td>${d.billRef}</td><td>${d.reported}</td><td>${d.verified}</td><td style="max-width:200px">${d.action}</td></tr>`;
   }).join('');
 }
-
+ 
 function updateAll() {
   const data = filtered();
   const view = document.getElementById('fView').value;
@@ -457,7 +457,7 @@ function updateAll() {
   updateRV();
   updateDisc();
 }
-
+ 
 // Tab clicks
 document.getElementById('packTabs').addEventListener('click', e => {
   const tab = e.target.closest('.tab');
@@ -466,12 +466,12 @@ document.getElementById('packTabs').addEventListener('click', e => {
   tab.classList.add('active');
   updatePacking();
 });
-
+ 
 // Filter changes
 ['fCtr','fCat','fBrand','fView'].forEach(id => {
   document.getElementById(id).addEventListener('change', updateAll);
 });
-
+ 
 // Auto-switch to packing view when container selected
 document.getElementById('fCtr').addEventListener('change', function() {
   if(this.value !== 'all') {
@@ -482,7 +482,7 @@ document.getElementById('fCtr').addEventListener('change', function() {
     if(match) match.classList.add('active');
   }
 });
-
+ 
 // Init
 updateAll();
 </script>
